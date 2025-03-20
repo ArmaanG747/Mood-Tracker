@@ -1,1 +1,68 @@
- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Mood Tracker</h1>
+    </header>
+
+    <main>
+        <article id="description">
+            <p>The Mood Tracker is a simple and intuitive web tool that allows you to log your daily mood using emojis and track your emotional trends over time. Whether you're feeling happy, sad, neutral, or excited, you can save your mood with a single click and revisit your past entries anytime.</p>
+            <p>With features like <strong>mood history, timeline view, and a planned calendar display</strong>, this tracker helps you become more aware of your emotional patterns. By analyzing past moods, you can gain insights into your well-being and identify trends that influence your daily life.</p>
+        </article>
+
+        <article id="use">
+            <p>How to Use Moode Tracker -</p>
+            <ul>
+                <li><strong>Pick Your Mood</strong>– Choose an emoji that matches your current emotion.</li>
+                <li><strong>Log Your Mood</strong>– Click the "Log Mood" button to save your entry.</li>
+                <li><strong>View Past Moods</strong>– See your past moods displayed in a timeline format.</li>
+                <li><strong>Filter by Time</strong>– (Coming Soon) View moods for a specific day, week, or month.</li>
+                <li><strong>Calendar View</strong>– (Bonus Feature) Get a visual representation of your emotions over time.</li>
+            </ul>
+        </article>
+
+        <section id="mood-form">
+            <form>
+                <fieldset>
+                    <legend>Mood Selector</legend>
+                    <label for="mood">Select Mood Emoji:</label><br>
+                    <select name="mood" id="mood">
+                        <option value="Happy">Happy - 😊</option>
+                        <option value="Sad">Sad - 😢</option>
+                        <option value="Neutral">Neutral - 😐</option>
+                        <option value="Excited">Excited - 🎉</option>
+                        <option value="Angry">Angry - 😡</option>
+                        <option value="Stressed">Stressed - 😖</option>
+                        <option value="Tired">Tired - 😴</option>
+                        <option value="Anxious">Anxious - 😰</option>
+                        <option value="Loved" selected>Loved - ❤️</option>
+                        <option value="Motivated">Motivated - 🚀</option>
+                    </select><br>
+                </fieldset>
+                <br>
+                <button type="button" onclick="userMood()">Log Mood</button>
+            </form>
+        </section>
+
+        <section id="mood-timeline">
+            <h3>Your Mood Timeline</h3>
+            <div id="user-mood"></div>
+            <button type="button" onclick="removeLastLog()">Remove Last Mood</button>
+            <button type="button" onclick="resetTimeline()">Reset Timeline</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mood Tracker. All rights reserved.</p>
+    </footer>
+    
+</body>
+</html> 
