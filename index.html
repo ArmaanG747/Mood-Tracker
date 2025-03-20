@@ -4,37 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mood Tracker</title>
+    <!-- Linking the CSS file for styling -->
     <link rel="stylesheet" href="style.css">
+    <!-- Linking the JavaScript file for functionality -->
     <script src="script.js"></script>
 </head>
 <body>
+    <!-- Header with the title -->
     <header>
         <h1>Mood Tracker</h1>
     </header>
 
     <main>
+        <!-- Description section -->
         <article id="description">
-            <p>The Mood Tracker is a simple and intuitive web tool that allows you to log your daily mood using emojis and track your emotional trends over time. Whether you're feeling happy, sad, neutral, or excited, you can save your mood with a single click and revisit your past entries anytime.</p>
-            <p>With features like <strong>mood history, timeline view, and a planned calendar display</strong>, this tracker helps you become more aware of your emotional patterns. By analyzing past moods, you can gain insights into your well-being and identify trends that influence your daily life.</p>
+            <p>The Mood Tracker is a simple and intuitive web tool that allows you to log your daily mood using emojis and track your emotional trends over time.</p>
+            <p>With features like mood history, timeline view, and a planned calendar display, this tracker helps you become more aware of your emotional patterns.</p>
         </article>
 
+        <!-- Instructions on how to use the mood tracker -->
         <article id="use">
-            <p>How to Use Moode Tracker -</p>
+            <p>How to Use Mood Tracker:</p>
             <ul>
-                <li><strong>Pick Your Mood</strong>– Choose an emoji that matches your current emotion.</li>
-                <li><strong>Log Your Mood</strong>– Click the "Log Mood" button to save your entry.</li>
-                <li><strong>View Past Moods</strong>– See your past moods displayed in a timeline format.</li>
-                <li><strong>Filter by Time</strong>– (Coming Soon) View moods for a specific day, week, or month.</li>
-                <li><strong>Calendar View</strong>– (Bonus Feature) Get a visual representation of your emotions over time.</li>
+                <li><strong>Pick Your Mood</strong> – Choose an emoji that matches your current emotion.</li>
+                <li><strong>Log Your Mood</strong> – Click the "Log Mood" button to save your entry.</li>
+                <li><strong>View Past Moods</strong> – See your past moods displayed in a timeline format.</li>
+                <li><strong>Calendar View</strong> – Get a visual representation of your emotions over time.</li>
+                <li><strong>Filter by Time</strong> – (Coming Soon) View moods for a specific day, week, or month.</li>
             </ul>
         </article>
 
+        <!-- Mood logging form -->
         <section id="mood-form">
             <form>
                 <fieldset>
                     <legend>Mood Selector</legend>
                     <label for="mood">Select Mood Emoji:</label><br>
+                    <!-- Dropdown to select mood -->
                     <select name="mood" id="mood">
+                        <!-- Mood options with emoji representation -->
                         <option value="Happy">Happy - 😊</option>
                         <option value="Sad">Sad - 😢</option>
                         <option value="Neutral">Neutral - 😐</option>
@@ -48,21 +56,30 @@
                     </select><br>
                 </fieldset>
                 <br>
+                <!-- Button to log mood -->
                 <button type="button" onclick="userMood()">Log Mood</button>
             </form>
         </section>
 
+        <!-- Timeline and calendar view section -->
         <section id="mood-timeline">
-            <h3>Your Mood Timeline</h3>
+            <h3 style="display: inline">Today's Mood Timeline</h3>
             <div id="user-mood"></div>
             <button type="button" onclick="removeLastLog()">Remove Last Mood</button>
             <button type="button" onclick="resetTimeline()">Reset Timeline</button>
+            <button type="button" onclick="toggleCalendar()">View Calendar</button>
+        </section>
+
+        <!-- Calendar view section (initially hidden) -->
+        <section id="calendar-view" style="display: none;">
+            <h3>Mood Calendar</h3>
+            <div id="calendar"></div>
         </section>
     </main>
 
+    <!-- Footer with copyright information -->
     <footer>
         <p>&copy; 2025 Mood Tracker. All rights reserved.</p>
     </footer>
-    
 </body>
-</html> 
+</html>

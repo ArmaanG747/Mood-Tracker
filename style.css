@@ -1,3 +1,4 @@
+/* General styling for the entire page */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
@@ -6,6 +7,7 @@ body {
     padding: 0;
 }
 
+/* Styling for the header at the top of the page */
 header {
     background-color: #3b5998;
     color: #fff;
@@ -14,6 +16,7 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+/* Styling for the footer at the bottom of the page */
 footer {
     background-color: #333;
     color: #fff;
@@ -22,12 +25,14 @@ footer {
     margin-top: 2rem;
 }
 
+/* Main container for the whole content */
 main {
     padding: 1rem;
     max-width: 600px;
     margin: auto;
 }
 
+/* Styling for description and usage sections */
 #description, #use {
     margin-bottom: 1rem;
     background-color: #fff;
@@ -36,6 +41,7 @@ main {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* General button styling for all buttons */
 button {
     background-color: #3b5998;
     color: white;
@@ -47,10 +53,12 @@ button {
     transition: background-color 0.3s ease;
 }
 
+/* Hover effect for buttons */
 button:hover {
     background-color: #29487d;
 }
 
+/* Styling for the dropdown (mood selector) */
 select {
     padding: 0.5rem;
     margin: 0.5rem 0;
@@ -58,14 +66,23 @@ select {
     border: 1px solid #ddd;
 }
 
+/* Mood timeline container styling */
 #mood-timeline {
     margin-top: 1rem;
 }
 
+/* Mood timeline content container */
+#user-mood{
+    max-height: 200px;
+    overflow: auto;
+}
+
+/* Styling for the timeline heading */
 #mood-timeline h3 {
     margin-bottom: 0.5rem;
 }
 
+/* Styling for individual mood entries in the timeline */
 #mood-timeline p {
     background-color: #fff;
     margin: 0.2rem 0;
@@ -74,7 +91,57 @@ select {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Calendar view styling */
+#calendar-view {
+    margin-top: 1rem;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
+/* Grid layout for the calendar */
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.5rem;
+}
+
+/* Individual calendar day styling */
+.calendar-day {
+    background-color: #eee;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 6px;
+    min-height: 50px;
+    position: relative;
+}
+
+/* Hover effect for calendar days */
+.calendar-day:hover {
+    background-color: #ddd;
+}
+
+/* Styling for mood emoji inside calendar days */
+.mood-emoji {
+    display: block;
+    margin-top: 0.3rem;
+    font-size: 1.5rem;
+}
+
+/* Styling specifically for buttons inside calendar */
+button {
+    margin: 0.2rem;
+}
+
+/* Styling for the calendar header */
+#calendar-view h4 {
+    text-align: center;
+    margin: 0.5rem 0;
+}
+
+
+/* Responsive design for mobile devices */
 @media (max-width: 600px) {
     main {
         padding: 0.5rem;
@@ -83,5 +150,8 @@ select {
         width: 100%;
         margin: 0.3rem 0;
     }
-}
+    #calendar {
+        grid-template-columns: repeat(4, 1fr);
+    }
+} 
  
